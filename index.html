@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-icon" href="TAJ.png">
+    <title>Hotel TAJ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to TAJ Hotel</h1>
+        <nav>
+            <ul>
+                <li><a href="#rooms">Rooms</a></li>
+                <li><a href="#booking">Booking</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="rooms">
+        <h2>Available Rooms</h2>
+        
+        <div class="room">
+            <h3 onclick="toggleImage('deluxeImage')">Deluxe Room</h3>
+            <p>Price: $150/night</p>
+            <p>Amenities: Free Wi-Fi, Breakfast, Pool Access</p>
+            <img id="deluxeImage" src="deluxe-room.jpg" alt="Deluxe Room" style="display: none;">
+        </div>
+        
+        <div class="room">
+            <h3 onclick="toggleImage('suiteImage')">Suite</h3>
+            <p>Price: $250/night</p>
+            <p>Amenities: Free Wi-Fi, Breakfast, Pool & Spa Access</p>
+            <img id="suiteImage" src="suite.jpeg" alt="Suite" style="display: none;">
+        </div>
+        
+        <div class="room">
+            <h3 onclick="toggleImage('standardImage')">Standard Room</h3>
+            <p>Price: $100/night</p>
+            <p>Amenities: Free Wi-Fi, Breakfast</p>
+            <img id="standardImage" src="standard-room.jpg" alt="Standard Room" style="display: none;">
+        </div>
+    </section>
+    
+
+    
+
+    <section id="booking">
+        <h2>Book Your Stay</h2>
+        <form id="bookingForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="roomType">Room Type:</label>
+            <select id="roomType" required>
+                <option value="Deluxe Room">Deluxe Room</option>
+                <option value="Suite">Suite</option>
+                <option value="Standard Room">Standard Room</option>
+            </select>
+
+            <label for="checkIn">Check-In Date:</label>
+            <input type="date" id="checkIn" required>
+
+            <label for="checkOut">Check-Out Date:</label>
+            <input type="date" id="checkOut" required>
+
+            <button type="submit">Book Now</button>
+        </form>
+        <p id="bookingMessage"></p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: contact@TAJhotel.com</p>
+        <p>Phone: +1 7482544533</p>
+        <p>Address: 1-180 Main Road, Vijayawada, AndhraPradesh</p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
